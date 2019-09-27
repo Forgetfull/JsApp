@@ -1,1 +1,41 @@
+header{
+       min-height: 600px;
+        
+}
 
+header{
+
+}
+.div1{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+}
+
+.top-header{
+        min-height: 200px;
+        background-color: blue;
+        width: 100%;
+}
+
+h1{
+        text-align: center;
+        color:white;
+}
+
+.div1{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+}
+
+.div2{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+}
+.div3{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+}
