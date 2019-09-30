@@ -1,41 +1,53 @@
 header{
-       min-height: 600px;
-        
+    border: 0;
+}
+/*Починить оступу у топ-лине*/
+.top-line{
+    height: 100px;
+    width: 100%;
+    background-color: LightBlue;
 }
 
-header{
 
-}
-.div1{
-        width: 300px;
-        height: 300px;
-        border:1px solid black;
-}
 
-.top-header{
-        min-height: 200px;
-        background-color: blue;
-        width: 100%;
+
+
+
+
+
+
+.color1{
+    background-color: LemonChiffon;
 }
 
-h1{
-        text-align: center;
-        color:white;
+.color2{
+    background-color: Moccasin;
 }
 
-.div1{
-        width: 300px;
-        height: 300px;
-        border:1px solid black;
+.color3{
+    background-color: Orchid;
 }
 
-.div2{
-        width: 300px;
-        height: 300px;
-        border:1px solid black;
+.color4{
+    background-color: Plum;
 }
-.div3{
-        width: 300px;
-        height: 300px;
-        border:1px solid black;
+
+.color5{
+    background-color: DarkSlateBlue;
+}
+
+.color6{
+    background-color: LightGreen;
+}
+
+.color7{
+    background-color: Silver;
+}
+
+.color8{
+    background-color: DarkSeaGreen;
+}
+
+.color9{
+    background-color: PowderBlue;
 }
