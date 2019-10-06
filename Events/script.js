@@ -12,22 +12,40 @@
 	}
 });
 */
+//Горячие клваиши
+// -----------вариант1------------
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// let flag = false;
+// document.onkeydown = function(e){
+// 	if (e.code == 'AltLeft') flag = true;
+// 	if (e.code == 'keyN' && flag){
+// 		flag = false;
+// 		console.log('work');
+// 	}
+// }
 
-let flag = false;
-document.onkeydown = function(e){
-	console.log(e.code);
-	if (e.code == 'AltLeft') flag = true;
-	if (e.code == 'keyN' && flag){
-		flag = false;
-		console.log('work');
+
+// -----------вариант2------------
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+document.onkeydown = function(event){
+	console.log(event.code);
+	if(event.code == 'AltLeft'){
+		console.log("111")
+		document.onkeydown = function (event){
+			if(event.keyCode == 78){
+				console.log("work")
+			}
+			else{
+					console.log('q')
+					document.onkeydown = null;
+			}
+		}
 	}
 }
 
-
-
-
-
-
+// document.onkeydown = function(event){
+// 		console.log(event.keyCode);
+// }
 
 
 
@@ -45,11 +63,16 @@ const btn7 = document.getElementById('btn7');
 const btn8 = document.getElementById('btn8');
 const btn9 = document.getElementById('btn9');
 // функ воис
-function voice(){
-	alert("hello word");
-}
 
-btn4.addEventListener('click', () => {alert("asdf")});
+function voice(text){
+alert(text);
+ 
+};
 
+
+
+
+
+// btn4.addEventListener('click', () => {alert("asdf")});
 
 
