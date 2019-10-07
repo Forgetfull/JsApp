@@ -1,0 +1,31 @@
+.top-menu{
+	justify-content: center;
+	display: flex;
+	height: 46px;
+}
+
+.top-menu li{
+	position: relative;
+	list-style-type: none;
+	padding: 15px 30px 15px 40px;
+	background: #ececed;
+}
+
+
+.top-menu a{
+	display: block;
+	
+	font-size: 14px;
+	
+	color: #454547;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.top-menu a:hover{
+	color: black;
+	transition:  1s;
+	border-bottom: 1px solid black;
+}
+
+	

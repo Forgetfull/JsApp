@@ -1,0 +1,32 @@
+
+/*темно-синий*/
+.navy{
+	background-color: #000080	;
+}
+
+/*серебрянный*/
+.silver{
+	background-color: #c0c0c0	;
+}
+
+/*сине-зеленый*/
+.teal{
+	background-color: #008080	;
+}
+
+/*lime*/
+.lime{
+	background-color: #00ff00	;
+}
+
+/*lime*/
+.pale-green{
+	background-color: #00ff00	;
+}
+
+
+
+/*fuchsia (фуксия, magenta)*/
+.fuchsia{
+	background-color: #ff00ff;
+}
