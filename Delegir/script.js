@@ -1,5 +1,4 @@
 const grid = document.querySelector('.grid');
-console.log(grid);
 
 grid.addEventListener('click', (e) => {
     let target = event.target;
@@ -10,22 +9,37 @@ grid.addEventListener('click', (e) => {
 //function lovli id
 function catchId(ID,EVENTS){
   let obj = document.getElementById(ID);
-  obj.onclick = EVENTS;
+  obj.addEventListener('click', EVENTS);
+  console.log('catchId')
 }
-//function lovli class
+
+
+
+
+//function lovli querrySelect
+function catchClass(CLASS,EVENT){
+        const obj = document.querySelector(CLASS);
+        obj.addEventListener("click", EVENT)    
+        console.log('query') 
+}
+
 //add css class
+function addClass(){
+
+}
+
+
+
 //add css ctyly
+function addCssStyle(Element,styleCss,option){
+  const elem = document.querySelector(Element);
+  console.log(elem);
+  elem.style.option = styleCss;
+}
 
-
-
-
-
-
-
-
-
-
-
+catchId('test',voice);
+catchClass('.top-line',voice);
+addCssStyle(".grid",300px,width);
 
 //catch many objacts
 //querySelector - vozvrat kolekcia , net svoistva ONCLICK
