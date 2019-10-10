@@ -1,9 +1,29 @@
-const grid = document.querySelector('.grid');
+//const grid = document.querySelector('.grid');
 
-grid.addEventListener('click', (e) => {
-    let target = event.target;
-});
-        
+//grid.addEventListener('click', function(event){
+//        let target = event.target;
+//        console.log(target);
+//        target.style.backgroundColor = 'red';
+//} )      
+
+
+
+
+//catchClass('.grid',(event) =>{
+//    let target = event.target;
+//    target.style.backgroundColor = 'green';    
+//});
+
+
+addCssStyle('.grid','backgroundColor',"green");
+
+
+
+
+
+
+
+
 
 
 //function lovli id
@@ -34,12 +54,13 @@ function addClass(){
 function addCssStyle(Element,styleCss,option){
   const elem = document.querySelector(Element);
   console.log(elem);
-  elem.style.option = styleCss;
+   let  q = styleCss;      
+  elem.style.q = "red";
 }
 
-catchId('test',voice);
-catchClass('.top-line',voice);
-addCssStyle(".grid",300px,width);
+//catchId('test',voice);
+//catchClass('.top-line',voice);
+//addCssStyle("#test",);
 
 //catch many objacts
 //querySelector - vozvrat kolekcia , net svoistva ONCLICK
@@ -71,7 +92,7 @@ const btn9 = document.getElementById('btn9');
 // функ воис
 
 function voice(){
-    alert('11111111111111')
+    alert('voice');
 };
 
 
