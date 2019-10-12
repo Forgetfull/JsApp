@@ -1,5 +1,32 @@
-// событие нажате на клавишу
-// событие комбинация клавиш
+const div1 = document.querySelector('.innerDiv');
+const div2 = document.querySelector('.innerDiv2');
+const div3 = document.querySelector('.innerDiv3');
+
+
+div1.addEventListener('click',changeColor);
+div2.addEventListener('click',changeColor);
+div3.addEventListener('click',changeColor);
+
+//Событие клика поднимаетя все выше и выше
+function changeColor(){
+	setTimeout(() => this.style.backgroundColor = 'red', 5000);
+	
+}
+
+//event.stopImmediatePropagation() - остановка всплатия
+
+
+
+// function taimerStop(stInter,stop){
+// 	let taim1 = setInterval(()=>{console.log(1)},1000);
+// 	setTimeout(()=>{clearInterval(taim1)},5000);
+// };
+
+
+
+
+
+
 // id всех кнопок 
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');

@@ -1,3 +1,25 @@
+//События мыши:
+//
+//click – происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).
+//contextmenu – происходит, когда кликнули на элемент правой кнопкой мыши.
+//mouseover / mouseout – когда мышь наводится на / покидает элемент.
+//mousedown / mouseup – когда нажали / отжали кнопку мыши на элементе.
+//mousemove – при движении мыши.
+//События на элементах управления:
+//
+//submit – пользователь отправил форму <form>.
+//focus – пользователь фокусируется на элементе, например нажимает на <input>.
+//Клавиатурные события:
+//
+//keydown и keyup – когда пользователь нажимает / отпускает клавишу.
+//События документа:
+//
+//DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен.
+//CSS events:
+//
+//transitionend – когда CSS-анимация завершена.
+
+
 //Обязательно к событиюдобавляем On
 /*document.onkeypress = function zaz(event){
 	console.log(event);
@@ -18,7 +40,8 @@
 // let flag = false;
 // document.onkeydown = function(e){
 // 	if (e.code == 'AltLeft') flag = true;
-// 	if (e.code == 'keyN' && flag){
+// 	if (e.code == 'KeyN' && flag){
+// 		console.log("ok")
 // 		flag = false;
 // 		console.log('work');
 // 	}
@@ -30,14 +53,15 @@
 document.onkeydown = function(event){
 	console.log(event.code);
 	if(event.code == 'AltLeft'){
-		console.log("111")
-		document.onkeydown = function (event){
-			if(event.keyCode == 78){
+		console.log("AltWork")
+		document.onkeyup = function (event){
+			if(event.code == 'KeyN'){
 				console.log("work")
+				voice();
 			}
 			else{
-					console.log('q')
 					document.onkeydown = null;
+
 			}
 		}
 	}
@@ -64,8 +88,8 @@ const btn8 = document.getElementById('btn8');
 const btn9 = document.getElementById('btn9');
 // функ воис
 
-function voice(text){
-alert(text);
+function voice(){
+alert("text");
  
 };
 
