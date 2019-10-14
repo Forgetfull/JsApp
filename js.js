@@ -1,8 +1,16 @@
+//faunction createElement(tag,props, ..children){
+///  const element = document.createElement(tag); 
 
+
+ //for (let prop in props){
+ 
+//  element[prop] = props[prop];//elements.type = props.type;
+// }     
+//}
 
 function createTodoItem(title){
-	const checkbox = document.createElement('input')
-	checkbox.type = 'checkbox';
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
 	checkbox.className = "checkbox"
 
 	const label = document.createElement('label');
@@ -62,13 +70,23 @@ function toggleTodotem({target}){
 
 function editTodoItem(){
 	const listItem = this.parentNode;
-	const title - listItem.querySelector('.title');
-	const editInput - listItem.querySelector('.textfild');
-	const isEditing - listItem.querySelector('.editing');
+  const title =  listItem.querySelector('.title');
+	const editInput = listItem.querySelector('.textfild');
+	const isEditing = listItem.querySelector('.editing');
+
+   if(isEditing){
+        title.innerText = editInput.value;
+        this.innerText = 'Изменить';
+   } else {
+        editInput.value = title.innerText;
+        this.innerText = 'Сохранить';
+   }
+   listItem.classList.toggle('editing');    
 }
 
 function deleTodoItem(){
-	
+	const listItem = this.parentNode;
+  todoList.removeChild(listItem);
 }
 
 

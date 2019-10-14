@@ -21,31 +21,32 @@
 
 
 //Обязательно к событиюдобавляем On
-/*document.onkeypress = function zaz(event){
+document.onkeypress = function zaz(event){
 	console.log(event);
 }
-*/
+
+
 // функция горячей клавиши.
-/*document.addEventListener("keypress", function(e){
+document.addEventListener("keypress", function(e){
 	// q - 113,w - 119, e - 101
 	console.log(e.keyCode);
 	if(e.keyCode == 113){
 		console.log(e.key)
 	}
 });
-*/
+
 //Горячие клваиши
 // -----------вариант1------------
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// let flag = false;
-// document.onkeydown = function(e){
-// 	if (e.code == 'AltLeft') flag = true;
-// 	if (e.code == 'KeyN' && flag){
-// 		console.log("ok")
-// 		flag = false;
-// 		console.log('work');
-// 	}
-// }
+
+let flag = false;
+document.onkeydown = function(e){
+	if (e.code == 'AltLeft') flag = true;//flag нужен для сраб именно Alt+n
+	if (e.code == 'KeyN' && flag){
+		console.log("ok")
+		flag = false;
+		console.log('work');
+	}
+}
 
 
 // -----------вариант2------------
@@ -60,22 +61,27 @@ document.onkeydown = function(event){
 				voice();
 			}
 			else{
-					document.onkeydown = null;
+					document.onkeydown = null;//обнуляем если после Alt нажато не n
 
 			}
 		}
 	}
 }
 
-// document.onkeydown = function(event){
-// 		console.log(event.keyCode);
-// }
+//общая функция для посадки на обьекта события
+//Если изменть на querySelectorAll то с помощью перебора колекции 
+//можно 
+function catchClass(OBJ,EVENT){
+        const obj = document.querySelector(OBJ);
+        obj.addEventListener("click", EVENT)    
+        console.log('query') 
+}
 
 
 
 
-// событие нажате на клавишу
-// событие комбинация клавиш
+
+
 // id всех кнопок 
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
@@ -97,6 +103,5 @@ alert("text");
 
 
 
-// btn4.addEventListener('click', () => {alert("asdf")});
 
 
