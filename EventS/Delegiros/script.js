@@ -16,12 +16,18 @@ document.onclick = function(event){
   if(!event.target.closest('.grid')){return};//проверка что элемент находится в grid
   if(!grid.contains(event.target)){alert("1")} //проверка что элемент находится в grid
   event.target.style.background = "red";
-
 }
 
 
 
 // Применение делегирования: действия в разметке
+
+
+
+
+
+
+
 // Приём проектирования «поведение»
 // Поведение: «Переключатель» (Toggler)
 // Спрячьте сообщения с помощью делегирования

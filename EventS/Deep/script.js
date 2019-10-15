@@ -1,11 +1,10 @@
-const div1 = document.querySelector('.innerDiv');
-const div2 = document.querySelector('.innerDiv2');
-const div3 = document.querySelector('.innerDiv3');
+//event.stopImmediatePropagation() - остановка всплатия - устаревшая спецификация
+//Event.preventDefault() - действующая
 
 
-div1.addEventListener('click',changeColor);
-div2.addEventListener('click',changeColor);
-div3.addEventListener('click',changeColor);
+
+
+
 
 //Событие клика поднимаетя все выше и выше
 function changeColor(){
@@ -13,7 +12,6 @@ function changeColor(){
 	
 }
 
-//event.stopImmediatePropagation() - остановка всплатия
 
 
 
@@ -22,9 +20,13 @@ function changeColor(){
 // 	setTimeout(()=>{clearInterval(taim1)},5000);
 // };
 
+div1.addEventListener('click',changeColor);
+div2.addEventListener('click',changeColor);
+div3.addEventListener('click',changeColor);
 
-
-
+const div1 = document.querySelector('.innerDiv');
+const div2 = document.querySelector('.innerDiv2');
+const div3 = document.querySelector('.innerDiv3');
 
 
 // id всех кнопок 
